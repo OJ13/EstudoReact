@@ -1,14 +1,22 @@
 {
-  "name": "ProjectReact",
-  "version": "1",
-  "description": "Tutorial teste de React",
-  "main": "index.js",
-  "author": "Osmar Junior",
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "mongoose": "^4.9.7",
-    "morgan": "^1.8.1"
-  }
+    "name": "project-react",
+    "version": "1",
+    "description": "Tutorial teste de React",
+    "main": "index.js",
+    "author": "Osmar Junior",
+    "license": "MIT",
+    "scripts": {
+        "api": "babel-node server.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.17.1",
+        "express": "^4.15.2",
+        "mongoose": "^4.9.7",
+        "morgan": "^1.8.1"
+    },
+    "devDependencies": {
+        "babel-cli": "6.18.1",
+        "babel-core": "^6.20.0",
+        "babel-preset-es2015": "^6.18.0"
+    }
 }
