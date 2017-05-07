@@ -3,8 +3,8 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import morgan from 'morgan';
 //importar models e rotas
-import Game from 'morgan';
-import { getGames, getGame, postGame, deleteGame } from './app/models/game';
+import Game from './app/models/game';
+import { getGames, getGame, postGame, deleteGame } from './app/routes/game';
 
 const app = express(); //nosso server
 const port = process.env.PORT || 8013;
@@ -15,7 +15,7 @@ const options = {
     replset: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }
 }; // <- Opções para a conexão com o DB
 mongoose.Promise = global.Promise;
-mongoose.connect('MongoConnection', options); //string de conexão do mongoDb
+mongoose.connect('localhost:27017', options); //string de conexão do mongoDb
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
