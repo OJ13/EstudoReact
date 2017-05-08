@@ -6,7 +6,9 @@
     "author": "Osmar Junior",
     "license": "MIT",
     "scripts": {
-        "api": "babel-node server.js"
+        "api": "babel-node server.js",
+        "start": "NODE_ENV=development & webpack-dev-server",
+        "build": "NODE_ENV=build & webpack"
     },
     "dependencies": {
         "babel-node": "^6.5.3",
@@ -14,7 +16,9 @@
         "express": "4.15.2",
         "mongoose": "^4.9.7",
         "morgan": "^1.8.1",
-        "react": "^15.5.4"
+        "react": "^15.5.4",
+        "react-dom": "^15.5.4",
+        "react-router": "3.0.0"
     },
     "devDependencies": {
         "babel-cli": "^6.18.0",
